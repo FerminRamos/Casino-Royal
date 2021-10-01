@@ -131,7 +131,6 @@ public class Roulette extends Game {
 
         switch (betType) {
             case "stra":
-                //TODO: DONE.
                 System.out.println("Pick a number to bet your straight on.");
                 choseNum = scanner.nextInt();
 
@@ -139,7 +138,6 @@ public class Roulette extends Game {
                 break;
 
             case "six":
-                //TODO: something
                 System.out.println("Pick two rows for your six line.");
 
                 //Prints out the diff. pairs that the user can choose from.
@@ -177,7 +175,6 @@ public class Roulette extends Game {
                 break;
 
             case "hol":
-                //TODO: DONE.
                 System.out.println("Which one do you want: High or Low");
                 String position = scanner.next().toLowerCase();
 
@@ -197,16 +194,13 @@ public class Roulette extends Game {
                 break;
 
             case "split":
-                //TODO: Figure out how to check if user put in a
-                // number (no letters).
                 System.out.println("Which numbers would you like to split?");
                 System.out.print("1st Number: ");
                 int num1 = scanner.nextInt();
 
                 System.out.print("2nd Number: ");
                 int num2 = scanner.nextInt();
-
-                //Check to see if numbers are valid.
+                
                 boolean together = false;
                 if (num1 != num2 && (num1 > 0 && num1 < 37) && (num2 > 0 && num2 < 37)) {
                     //Check to see if next to each other.
@@ -272,9 +266,6 @@ public class Roulette extends Game {
                 break;
 
             case "rob":
-                //TODO: Figure out how to make a loop that asks the
-                //      user for valid answer (either red OR black)
-                //      until they provide a valid answer.
                 System.out.println("Which one do you want: red or black?");
                 String choice = scanner.next().toLowerCase();
 
@@ -282,10 +273,6 @@ public class Roulette extends Game {
                 break;
 
             case "doz":
-                //TODO: figure out how to make a loop that asks the
-                //      user for a valid answer (either 1, 2, or 3)
-                //      and asks until they provide a valid answer.
-
                 System.out.println("Which dozen do you want?");
                 System.out.println(" [1] (1-12)");
                 System.out.println(" [2] (13-24)");
@@ -302,10 +289,6 @@ public class Roulette extends Game {
                 break;
 
             case "stre":
-                //TODO: Check if user input = a number. Also, figure
-                //      out how to make a loop that asks the user
-                //      for a valid answer (first row only, 1+3,
-                //      but < 34), this only has 1 check.
                 System.out.println("What street would you like to bet on? ");
                 System.out.print("~ Options:");
                 for(int i = 1; i < 35; i+=3){
@@ -338,8 +321,6 @@ public class Roulette extends Game {
                 break;
 
             case "ooe":
-                //TODO: Again, figure out a loop for checking with
-                //      user if input is correct.
                 System.out.println("Which one do you want: Odd or Even?");
                 choice = scanner.next().toLowerCase();
 
@@ -347,7 +328,6 @@ public class Roulette extends Game {
                 break;
 
             case "col":
-                //TODO: Make a Loop if invalid input.
                 System.out.println("Which column do you want?");
                 System.out.println("[1] (3-36)");
                 System.out.println("[2] (2-35)");
@@ -358,7 +338,6 @@ public class Roulette extends Game {
                 break;
 
             default:
-                //TODO: Check if it reiterates the bet after invalid input.
                 System.out.println(Utils.invalidChoice(betType));
                 try {
                     TimeUnit.SECONDS.sleep(1);
@@ -392,7 +371,6 @@ public class Roulette extends Game {
      *
      * @return returns true if user won.
      */
-    //TODO: DONE.
     private boolean straight(int slotNum) {
         return winningSlotNum == slotNum;
     }
@@ -405,7 +383,6 @@ public class Roulette extends Game {
      * @param rowNum Left-Most pair number.
      * @return returns true if user won.
      */
-    //TODO: finish.
     private boolean sixLine(int rowNum) {
         for(int col = 0; col < 3; col++) {
             if(rouletteSlots[rowNum][col] == winningSlotNum ||
@@ -423,7 +400,6 @@ public class Roulette extends Game {
      * @param position Represents either high or low.
      * @return returns true if won.
      */
-    //TODO: DONE.
     private boolean highOrLow(String position) {
         //If winningSlotNum is high, and guessed high
         if(winningSlotNum >= 19){
@@ -451,7 +427,6 @@ public class Roulette extends Game {
      *                 +/- 1 = vertical movement.
      * @return return true if won.
      */
-    //TODO: DONE.
     private boolean split(int slotNum1, int slotNum2) {
         for (int row = 0; row < 12; row++) {
             for (int col = 0; col < 3; col++) {
@@ -474,7 +449,6 @@ public class Roulette extends Game {
      * @param color If user picked red, slotNum = 1. Else, slotNum = 2.
      * @return return true if won.
      */
-    //TODO: DONE.
     private boolean redOrBlack(String color) {
 
         for(int isRed: Red){
@@ -495,7 +469,6 @@ public class Roulette extends Game {
      *                the user picked.
      * @return return true if user won.
      */
-    //TODO: DONE.
     private boolean dozen(int slotNum) {
         while(slotNum < 12){
             if(slotNum == winningSlotNum){
@@ -514,7 +487,6 @@ public class Roulette extends Game {
      * @param row Represents the row that the user picked.
      * @return returns true if user won.
      */
-    //TODO: DONE.
     private boolean street(int row){
         for(int col = 0; col < 3; col++){
             if(rouletteSlots[row][col] == winningSlotNum){
@@ -532,7 +504,6 @@ public class Roulette extends Game {
      *                equals 2.
      * @return returns true if user won.
      */
-    //TODO: DONE.
     private boolean oddOrEven(String numType){
         if(winningSlotNum % 2 == 0){
             if(numType.equals("even")){
@@ -553,7 +524,6 @@ public class Roulette extends Game {
      *                the slot number.
      * @return returns true if user won.
      */
-    //TODO: DONE.
     private boolean column(int column) {
         for(int row = 0; row < 3; row++){
             if(rouletteSlots[row][column] == winningSlotNum){
@@ -699,55 +669,46 @@ public class Roulette extends Game {
                         //PayOut Rates
                         switch (bets[0].getBetType()){
                             case "stra":
-                                //something
                                 player.gainChips(bets[0].getBetAmount() * 36);
                                 System.out.println();
                                 break;
 
                             case "six":
-                                //something
                                 player.gainChips(bets[0].getBetAmount() * 6);
                                 System.out.println();
                                 break;
 
                             case "hol":
-                                //something
                                 player.gainChips(bets[0].getBetAmount() * 2);
                                 System.out.println();
                                 break;
 
                             case "split":
-                                //something
                                 player.gainChips(bets[0].getBetAmount() * 18);
                                 System.out.println();
                                 break;
 
                             case "rob":
-                                //something
                                 player.gainChips(bets[0].getBetAmount() * 2);
                                 System.out.println();
                                 break;
 
                             case "doz":
-                                //something
                                 player.gainChips(bets[0].getBetAmount() * 3);
                                 System.out.println();
                                 break;
 
                             case "stre":
-                                //something
                                 player.gainChips(bets[0].getBetAmount() * 18);
                                 System.out.println();
                                 break;
 
                             case "ooe":
-                                //something
                                 player.gainChips(bets[0].getBetAmount() * 2);
                                 System.out.println();
                                 break;
 
                             case "col":
-                                //something
                                 player.gainChips(bets[0].getBetAmount() * 3);
                                 System.out.println();
                                 break;
@@ -775,7 +736,6 @@ public class Roulette extends Game {
                 break;
 
             case "q":
-                //TODO: DONE.
                 try{
                     TimeUnit.SECONDS.sleep(3);
                 }catch (InterruptedException e) {
@@ -786,7 +746,6 @@ public class Roulette extends Game {
                 break;
 
             default:
-                //TODO: DONE.
                 System.out.println(Utils.invalidChoice(choice));
                 startGame();
                 break;

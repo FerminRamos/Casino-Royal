@@ -21,3 +21,17 @@ Slot Machine is a luck-based game in which the user can bet 5 chips per transact
 *(Note that the payout rate includes the 5 chips lost to play the game. Net winnings is not "payout rate + 5 initial chips".)*
 
 If no match is outputed on the slot machine, then the player loses their 5 chips. 
+
+# Roulette
+Roulette is a luck-base game in which the user can make a bet any quantity of chips (as long as they can afford the quantity) on any number on the board. The roulette board has numbers 1-36. The user can place the following bets:
+| Possible Bets |
+| ------------- |
+| Straight |
+| Split |
+| Street |
+| High or Low |
+| Red or Black |
+| Odd or Even |
+| Dozen |
+| Column |
+

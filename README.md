@@ -1,4 +1,4 @@
-# Casino-Royal
+# Casino-Royal, Overview
 Is a command line-based game in which the user has the option of playing one of four popular casino games: Big Six Wheel, Slot Machine, Roulette, or Blackjack
 
 # Entering the Casino
@@ -35,3 +35,8 @@ Roulette is a luck-base game in which the user can make a bet any quantity of ch
 | Dozen |
 | Column |
 
+
+##Blackjack
+Blackjack is a tactics based game in which the user can bet any quantity of chips (as long as they can afford the quantity). The objective of the game is to draw as many cards needed to reach 21, without going over 21. If the user goes over 21, they automatically lose the round. Cards are assigned points according to their number (or symbol if card has no number). List of cards and their respective point value listed below. 
+
+[Table with card values listed]

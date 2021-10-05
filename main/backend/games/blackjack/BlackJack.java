@@ -497,7 +497,7 @@ public class BlackJack extends Game {
                     System.out.println("| Here's half your bet. |");
                     System.out.println("- - - - - - - - - - - - -");
                     System.out.println("   Come again soon!");
-                    player.gainChips(Multiplier);
+                    player.gainChips(Multiplier / 2);
                 }
                 System.out.println();
                 System.out.println();
